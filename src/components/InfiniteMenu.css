@@ -1,0 +1,16 @@
+#infinite-grid-menu-canvas { cursor: grab; width: 100%; height: 100%; overflow: hidden; position: relative; outline: none; }
+#infinite-grid-menu-canvas:active { cursor: grabbing; }
+.face-title { user-select: none; position: absolute; font-weight: 900; font-size: 2.5rem; left: 2rem; top: 50%; color: #fff; pointer-events: none; transform: translate(0, -50%); }
+.face-title.active { opacity: 1; transition: 0.5s ease; }
+.face-title.inactive { opacity: 0; transition: 0.1s ease; }
+.face-description { user-select: none; position: absolute; max-width: 20ch; top: 50%; font-size: 1rem; right: 2rem; color: rgba(255,255,255,0.5); pointer-events: none; transform: translate(0, -50%); }
+.face-description.active { opacity: 1; transition: 0.5s ease; }
+.face-description.inactive { opacity: 0; transition: 0.1s ease; }
+.action-button { position: absolute; left: 50%; bottom: 3.8em; transform: translateX(-50%); z-index: 10; width: 50px; height: 50px; display: grid; place-items: center; background: #00ff41; border: 2px solid #000; cursor: pointer; transition: 0.3s ease; }
+.action-button:hover { background: #39ff14; transform: translateX(-50%) scale(1.1); }
+.action-button.active { opacity: 1; pointer-events: auto; }
+.action-button.inactive { opacity: 0; pointer-events: none; }
+.action-button-icon { color: #000; font-size: 22px; font-weight: 700; line-height: 1; }
+.im-progress { position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%); display: flex; gap: 0.5rem; z-index: 10; }
+.im-dot { width: 2rem; height: 2px; background: rgba(255,255,255,0.15); transition: all 0.3s; }
+.im-dot-active { background: #00ff41; width: 3rem; }
